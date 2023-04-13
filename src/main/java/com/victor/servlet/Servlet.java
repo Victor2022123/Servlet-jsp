@@ -21,7 +21,14 @@ import java.io.IOException;
 public class Servlet extends HttpServlet {/*servelt hijo de  httpServelt abrir con control*/
   @Override //void no va retornar ningun valor , doget va retornar lo que va dentro del dogest para atrapar inconveniente de entrada y salida dentro del dogest*/
     protected void doGet (HttpServletRequest req, HttpServletResponse resp)throws ServletException, IOException{
-        resp.getWriter().append("Hola Mundo!");/*csq se agrega secuencia de caracteres */
+        String param = req.getParameter("nombre");
+        if(param==null){
+        resp.getWriter().append("Hola, Como estas?");/*csq se agrega secuencia de caracteres */
+        }else{
+        String saludo = "Hola, " + param +"!";
+        resp.getWriter().append(saludo);
+        }
+        
   
   
       
