@@ -13,6 +13,22 @@
     </head>
     <body>
         <h1>Pagina Inicio</h1>
-        <h2>Hola <%=request.getAttribute("name") %></h2>
+        <!--<h2>Hola <%=request.getAttribute("name") %></h2> -->
+        <h2>Lista de Nombres</h2>
+        <%= request.getAttribute ("nomina") %>
+        <form method="POST"
+              <p>
+            <label form="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduzca el nombre"/>
+            
+        
+        </p>
+        <p>
+            
+            <button type="submit"> Enviar</button>
+        </p>     
+        
+    </form>
+      
     </body>
 </html>
